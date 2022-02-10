@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>当前最新的count值为: {{ this.$store.state.count }}</h3>
-    <button>+1</button>
+    <button @click="btnHandler1">+1</button>
   </div>
 </template>
 
@@ -9,6 +9,11 @@
 export default {
   data () {
     return {}
+  },
+  methods: {
+    btnHandler1 () {
+      this.$store.commit('add')
+    }
   }
 }
 </script>

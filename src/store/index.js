@@ -8,7 +8,12 @@ export default new Vuex.Store({
   state: {
     count: 0 // 对应计数器值
   },
-  mutations: {},
+  mutations: {
+    add (state) {
+      // 变更状态
+      state.count++
+    }
+  },
   actions: {},
   modules: {}
 })
