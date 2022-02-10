@@ -9,9 +9,14 @@ export default new Vuex.Store({
     count: 0 // 对应计数器值
   },
   mutations: {
+    // 不带参数情况
     add (state) {
       // 变更状态
       state.count++
+    },
+    // 带参数情况
+    addN (state, step) {
+      state.count += step
     }
   },
   actions: {},
