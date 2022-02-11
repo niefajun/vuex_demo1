@@ -4,6 +4,7 @@
     <button @click="btnHandler1">+1</button>
     <button @click="btnHandler2">+N</button>
     <button @click="btnHandlerM">+1 mutation async</button>
+    <button @click="btnHandler3">+1 action async</button>
   </div>
 </template>
 
@@ -23,6 +24,9 @@ export default {
     },
     btnHandlerM () {
       this.$store.commit('addMutationAsync')
+    },
+    btnHandler3 () {
+      this.$store.dispatch('addAAsync')
     }
   }
 }

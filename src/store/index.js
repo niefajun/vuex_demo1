@@ -33,6 +33,12 @@ export default new Vuex.Store({
       state.count -= step
     }
   },
-  actions: {},
+  actions: {
+    addAAsync (context) {
+      setTimeout(() => {
+        context.commit('add')
+      }, 1000)
+    }
+  },
   modules: {}
 })
