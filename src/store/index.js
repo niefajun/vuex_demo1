@@ -17,6 +17,13 @@ export default new Vuex.Store({
     // 带参数情况
     addN (state, step) {
       state.count += step
+    },
+    sub (state) {
+      // 变更状态
+      state.count--
+    },
+    subN (state, step) {
+      state.count -= step
     }
   },
   actions: {},
