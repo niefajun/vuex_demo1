@@ -34,9 +34,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    addAAsync (context) {
+    // 不带自定义action方法
+    addAsync (context) {
       setTimeout(() => {
         context.commit('add')
+      }, 1000)
+    },
+    // 带自定义参数action方法
+    addNAsync (context, step) {
+      setTimeout(() => {
+        context.commit('addN', step)
       }, 1000)
     }
   },

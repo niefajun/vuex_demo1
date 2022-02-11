@@ -5,6 +5,7 @@
     <button @click="btnHandler2">+N</button>
     <button @click="btnHandlerM">+1 mutation async</button>
     <button @click="btnHandler3">+1 action async</button>
+    <button @click="btnHandler4">+N action async</button>
   </div>
 </template>
 
@@ -26,7 +27,12 @@ export default {
       this.$store.commit('addMutationAsync')
     },
     btnHandler3 () {
-      this.$store.dispatch('addAAsync')
+      // 调用action方法不带参数
+      this.$store.dispatch('addAsync')
+    },
+    btnHandler4 () {
+      // 调用action方法带自定义参数
+      this.$store.dispatch('addNAsync', 3)
     }
   }
 }
