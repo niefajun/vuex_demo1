@@ -57,5 +57,10 @@ export default new Vuex.Store({
       }, 1000)
     }
   },
+  getters: {
+    showNum (state) {
+      return 'getter：当前最新的数量是【' + state.count + '】'
+    }
+  },
   modules: {}
 })

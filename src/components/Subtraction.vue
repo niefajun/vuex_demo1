@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>当前最新的count值为:{{ count }}</h3>
+    <h3>{{ showNum }}</h3>
     <button @click='btnHandler3'>-1</button>
     <button @click='btnHandler4'>-N</button>
     <button @click='btnHandler5'>-1 async</button>
@@ -9,14 +10,15 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex'
 
 export default {
   data () {
     return {}
   },
   computed: {
-    ...mapState(['count'])
+    ...mapState(['count']),
+    ...mapGetters(['showNum'])
   },
   methods: {
     // 将全局mutation方法映射为当前组件的方法method

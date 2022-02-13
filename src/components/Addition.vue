@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>当前最新的count值为: {{ this.$store.state.count }}</h3>
+    <h3>{{ this.$store.getters.showNum }}</h3>
     <button @click="btnHandler1">+1</button>
     <button @click="btnHandler2">+N</button>
     <button @click="btnHandlerM">+1 mutation async</button>
