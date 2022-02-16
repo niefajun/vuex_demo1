@@ -1,5 +1,6 @@
 # vuex_demo1
 功能:  vuex学习项目对应程序
+配套相关文章：[miebugs](http://www.miebugs.com)
 
 ## Project setup
 ```
